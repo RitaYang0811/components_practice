@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h3>.l-divide</h3>
+    <div class="l-divide">
+      <div class="l-divide__item">Full</div>
+    </div>
+    <br />
+
+    <div class="l-divide">
+      <div class="l-divide__item l-divide__item--half">Half</div>
+      <div class="l-divide__item l-divide__item--half">Half</div>
+    </div>
+
+    <hr />
+    <h3>.l-grid</h3>
+    <hr />
+    <h3>.l-flexBar</h3>
+    <div>
+      <div class="l-flexBar">
+        <div class="l-flexBar__full">l-flexBar__full</div>
+      </div>
+      <br />
+      <div class="l-flexBar">
+        <div class="l-flexBar__grow">l-flexBar__grow</div>
+        <div class="l-flexBar__shrink">l-flexBar__shrink</div>
+      </div>
+      <br />
+      <div class="l-flexBar">
+        <div class="l-flexBar__left">l-flexBar__left</div>
+        <div class="l-flexBar__right">l-flexBar__right</div>
+      </div>
+      <br />
+      <div class="l-flexBar">
+        <div class="l-flexBar__center">l-flexBar__center</div>
+      </div>
+    </div>
+    <hr />
+    <h3>大區塊</h3>
+    <div>
+      <p>首頁區塊.l-majorBlock</p>
+      <ul>
+        <li>.l-majorBlock--sm 上下間距30px</li>
+        <li>.l-majorBlock 預設上下間距40px</li>
+        <li>.l-majorBlock--lg 上下間距60px</li>
+        <li>.l-majorBlock--insidePage 上間距0px</li>
+      </ul>
+      <div class="l-majorBlock">
+        <div class="l-majorBlock__title">標題</div>
+        <div class="l-majorBlock__content">內容</div>
+      </div>
+      <p>內頁區塊 .l-majorBlock .l-majorBlock--insidePage</p>
+      <div class="l-majorBlock l-majorBlock--insidePage">
+        <div class="l-majorBlock__title">標題</div>
+        <div class="l-majorBlock__content">內容</div>
+      </div>
+
+      <p>匯率資訊/匯率試算.l-minorBlock</p>
+      <div class="l-minorBlock">
+        <div class="l-minorBlock__header">小標題</div>
+        <div class="l-minorBlock__content">內文</div>
+        <div class="l-minorBlock__footer">底部</div>
+      </div>
+
+      <p>金融市場資訊.l-marketBlock</p>
+      <div class="l-marketBlock">
+        <div class="l-marketBlock__info">匯率資訊區</div>
+        <div class="l-marketBlock__calc">匯率試算區</div>
+      </div>
+    </div>
+  </body>
+</html>
