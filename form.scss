@@ -1,0 +1,38 @@
+%textbox {
+  line-height: 1.5;
+  border-radius: 12px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  &.is-error {
+    border-color: #e51010;
+  }
+}
+
+.o-textbox {
+  @extend %textbox;
+  position: relative;
+  width: 220px;
+  padding: 12px;
+  &--sm {
+    width: 140px;
+  }
+  &--lg {
+    width: 266px;
+  }
+  &.is-error {
+    border-color: #e51010;
+    &::after {
+      content: '錯誤信息錯誤信息';
+      display: block;
+      position: absolute;
+      width: 100%;
+      color: #e51010;
+      font-size: 0.875em;
+      left: 0px;
+      bottom: -4px;
+    }
+  }
+}
+.o-iconbox {
+  @extend %textbox;
+}

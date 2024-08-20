@@ -7,17 +7,6 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h3>.l-divide</h3>
-    <div class="l-divide">
-      <div class="l-divide__item">Full</div>
-    </div>
-    <br />
-
-    <div class="l-divide">
-      <div class="l-divide__item l-divide__item--half">Half</div>
-      <div class="l-divide__item l-divide__item--half">Half</div>
-    </div>
-
     <hr />
     <h3>.l-grid</h3>
     <hr />
@@ -53,25 +42,33 @@
       </ul>
       <div class="l-majorBlock">
         <div class="l-majorBlock__title">標題</div>
-        <div class="l-majorBlock__content">內容</div>
+        <div style="height: 150px" class="l-majorBlock__content">內容</div>
+      </div>
+      <br />
+      <p>新聞影音區</p>
+      <!-- todo:RWD -->
+      <div class="l-majorBlock l-majorBlock--chill">
+        <div style="height: 150px" class="l-majorBlock__news">新聞</div>
+        <div style="height: 150px" class="l-majorBlock__video">影音</div>
       </div>
       <p>內頁區塊 .l-majorBlock .l-majorBlock--insidePage</p>
       <div class="l-majorBlock l-majorBlock--insidePage">
         <div class="l-majorBlock__title">標題</div>
-        <div class="l-majorBlock__content">內容</div>
+        <div style="height: 150px" class="l-majorBlock__content">內容</div>
       </div>
-
+      <br />
       <p>匯率資訊/匯率試算.l-minorBlock</p>
       <div class="l-minorBlock">
         <div class="l-minorBlock__header">小標題</div>
-        <div class="l-minorBlock__content">內文</div>
+        <div style="height: 150px" class="l-minorBlock__content">內文</div>
         <div class="l-minorBlock__footer">底部</div>
       </div>
 
       <p>金融市場資訊.l-marketBlock</p>
+      <!-- todo:RWD -->
       <div class="l-marketBlock">
-        <div class="l-marketBlock__info">匯率資訊區</div>
-        <div class="l-marketBlock__calc">匯率試算區</div>
+        <div style="height: 150px" class="l-marketBlock__info">匯率資訊區</div>
+        <div style="height: 150px" class="l-marketBlock__calc">匯率試算區</div>
       </div>
     </div>
   </body>
