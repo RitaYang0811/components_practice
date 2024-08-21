@@ -1,0 +1,15 @@
+// @use '../_mixins/bemit' as bemit;
+
+// $gaps: (
+//   xl: 24px,
+//   lg: 20px,
+//   md: 18px,
+// );
+
+// @include bemit.utility($gaps) {
+//   @each $suffix, $size in $gaps {
+//     .u-flex-gap-#{$suffix} {
+//       gap: $size;
+//     }
+//   }
+// }
