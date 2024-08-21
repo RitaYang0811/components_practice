@@ -1,53 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>form</title>
-    <link rel="stylesheet" href="./form.css" />
+    <link rel="stylesheet" href="./form.css"/>
   </head>
   <body>
     <h3>表單</h3>
     <p>輸入框</p>
-    <input type="text" class="o-textbox" placeholder="文字輸入框" />
-    <input
-      type="text"
-      class="o-textbox o-textbox--sm"
-      placeholder="文字輸入框sm"
-    />
-    <input
-      type="text"
-      class="o-textbox o-textbox--lg"
-      placeholder="文字輸入框lg"
-    />
-    <input
-      type="text"
-      class="o-textbox is-error"
-      placeholder="文字輸入框 + .is-error"
-    />
-    <br />
-    <p>搜尋匡</p>
-    <div class="o-iconbox">
-      <input type="text" class="o-iconbox__input" />
-      <div class="o-iconbox__icon o-iconbox--search"></div>
+    <div>
+      <input type="text" class="o-textbox" placeholder="文字輸入框 預設"/>
+      <input type="text" class="o-textbox o-textbox--sm" placeholder="文字輸入框 sm"/>
+      <input type="text" class="o-textbox o-textbox--lg" placeholder="文字輸入框 lg"/>
+      <input type="text" class="o-textbox is-error" placeholder="文字輸入框 錯誤"/>
+      <input type="text" class="o-textbox" placeholder="文字輸入框 禁用" disabled/>
+      <br/>
     </div>
-    <br />
-    <p>複選-按鈕樣式</p>
-    <div class="o-checkbox o-checkbox--btn"></div>
-    <p>複選-外框樣式</p>
-    <div class="o-checkbox o-checkbox--outline"></div>
+    <p>搜尋框</p>
+    <div>
+      <div class="o-iconbox" >
+        <input type="search" class="o-iconbox__input" placeholder="搜尋文字"/>
+        <button type="button" class="o-iconbox__btn" aria-label="前往搜尋">
+          <i class="o-iconbox__icon o-iconbox__icon--search"></i>
+        </button>
+      </div>
 
-    <br />
-    <p>單選-按鈕樣式</p>
-    <div class="o-radiobox o-radiobox--btn"></div>
-    <p>單選-外框樣式</p>
-    <div class="o-radiobox o-radiobox--outline"></div>
-    <br />
-    <p>下拉</p>
-    <div class="o-selectbox"></div>
-    <br />
-    <p>幣別</p>
-    <div class="o-currancybox"></div>
-    <hr />
-  </body>
+      <div class="o-iconbox o-iconbox--lg" >
+        <input type="search" class="o-iconbox__input o-iconbox__input--lg" placeholder="搜尋文字 lg"/>
+        <button type="button" class="o-iconbox__btn" aria-label="前往搜尋">
+          <i class="o-iconbox__icon o-iconbox__icon--search"></i>
+        </button>
+      </div>
+      <!--錯誤樣式：在input 及 button 使用disables，並於icon加上.is-error-->
+      <div class="o-iconbox" >
+        <input type="search" class="o-iconbox__input o-iconbox__input" placeholder="搜尋文字 禁用"  disabled/>
+        <button type="button" class="o-iconbox__btn" aria-label="前往搜尋" disabled>
+          <i class="o-iconbox__icon o-iconbox__icon--search is-disabled" ></i>
+        </button>
+      </div>
+
+      <!--錯誤樣式：加上.is-error-->
+      <div class="o-iconbox is-error" >
+        <input type="search" class="o-iconbox__input o-iconbox__input" placeholder="搜尋文字 錯誤"/>
+        <button type="button" class="o-iconbox__btn" aria-label="前往搜尋">
+          <i class="o-iconbox__icon o-iconbox__icon--search" ></i>
+        </button>
+      </div>
+    </div>
+    <h3>複選</h3>
+    <p>複選-預設樣式</p>
+    <div>
+      <label class="o-checkbox o-checkbox--default">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input">
+        <span class="o-checkbox__text">複選-預設</span>
+      </label>
+      <label class="o-checkbox o-checkbox--default">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" checked>
+        <span class="o-checkbox__text">複選-已選</span>
+      </label>
+      <label class="o-checkbox o-checkbox--default">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" disabled>
+        <span class="o-checkbox__text">複選-禁用</span>
+      </label>
+      <label class="o-checkbox o-checkbox--default">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" checked disabled>
+        <span class="o-checkbox__text">複選-已選禁用</span>
+      </label>
+    </div>
+    <p>複選-圓點樣式</p>
+    <div>
+      <label class="o-checkbox o-checkbox--dot">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input">
+        <span class="o-checkbox__text">複選-預設</span>
+      </label>
+      <label class="o-checkbox o-checkbox--dot">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" checked>
+        <span class="o-checkbox__text">複選-已選</span>
+      </label>
+      <label class="o-checkbox o-checkbox--dot    " >
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" disabled>
+        <span class="o-checkbox__text">複選-禁用</span>
+      </label>
+    </div>
+    <p>複選-外框樣式</p>
+    <div>
+      <label class="o-checkbox o-checkbox--outline">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input">
+        <span class="o-checkbox__text">複選-預設</span>
+      </label>
+      <label class="o-checkbox o-checkbox--outline">
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" checked>
+        <span class="o-checkbox__text">複選-已選</span>
+      </label>
+      <label class="o-checkbox o-checkbox--outline" >
+        <input type="checkbox" value="複選-預設" class="o-checkbox__input" disabled>
+        <span class="o-checkbox__text">複選-禁用</span>
+      </label>
+    </div>
+    <br/>
+  </div>
+  <h3>單選</h3>
+  <div>
+    <p>單選-預設樣式</p>
+    <div class="o-radiobox"></div>
+    <br/>
+  </div>
+  <h3>下拉選單</h3>
+  <p>主要樣式</p>
+  <div>
+    <select class="o-selectbox">
+      <option value="" selected>請選擇選項</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+
+    <select class="o-selectbox" disabled>
+      <option value="" selected>請選擇選項 禁用</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+
+    <select class="o-selectbox is-error">
+      <option value="" selected>請選擇選項 錯誤</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+  </div>
+  <p>次要樣式</p>
+  <div>
+    <select class="o-selectbox o-selectbox--secondary">
+      <option value="" selected>下拉選單樣式</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+
+    <select class="o-selectbox o-selectbox--secondary" disabled>
+      <option value="" selected>下拉選單樣式禁用</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+
+    <select class="o-selectbox o-selectbox--secondary is-error">
+      <option value="" selected>下拉選單樣式錯誤</option>
+      <option value="option1">選項 1</option>
+      <option value="option2">選項 2</option>
+      <option value="option3">選項 3</option>
+    </select>
+  </div>
+
+  <h3>錯誤訊息</h3>
+  <div class="o-errorMsg">錯誤訊息錯誤訊息</div>
+
+  <br/>
+  <p>幣別</p>
+  <div class="o-currancybox"></div>
+  <hr/>
+</body>
 </html>
