@@ -1,0 +1,77 @@
+{% extends './_layouts/_layout.tmpl' %}
+
+{% block content %}
+<!-- 實際使用請將style移除 -->
+<h2>大區塊</h2>
+<h3> 區塊外框 .l-majorBlock__wrap</h3>
+
+<div class="l-majorBlock">
+    <div class="l-majorBlock__wrap">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+</div>
+<br>
+
+<h3>首頁區塊.l-majorBlock</h3>
+<ul>
+    <li>.l-majorBlock--sm 上下間距20px</li>
+    <li>.l-majorBlock 預設上下間距40px</li>
+    <li>.l-majorBlock--lg 上下間距60px</li>
+</ul>
+<div style="background-color:#dddddd" class="l-majorBlock">
+    <div class="l-majorBlock__wrap">
+        <div style="background-color:#a3cbf4" class="l-majorBlock__title">標題</div>
+        <div style="background-color:#a3cbf4;height:150px" class="l-majorBlock__content">內容</div>
+    </div>
+</div>
+<br />
+
+<h3>新聞影音區.l-majorBlock__chill</h3>
+<ul>
+    <li>平板為直式</li>
+    <li>手機為gap:80px</li>
+</ul>
+<div style="background-color:#dddddd" class="l-majorBlock">
+    <div class="l-majorBlock__wrap">
+        <div class="l-majorBlock__chill">
+            <div style="background-color:#a3cbf4;height:150px" class="l-majorBlock__news">新聞</div>
+            <div style="background-color:#a3cbf4;height:150px" class="l-majorBlock__video">影音</div>
+        </div>
+    </div>
+</div>
+<br>
+
+<h3>內頁區塊 .l-majorBlock .l-majorBlock--insidePage</h3>
+<p>.l-majorBlock--insidePage 上間距0px</p>
+<div style="background-color:#dddddd" class="l-majorBlock l-majorBlock--insidePage">
+    <div class="l-majorBlock__wrap">
+        <div style="background-color:#a3cbf4" class="l-majorBlock__title">標題</div>
+        <div style="background-color:#a3cbf4;height:150px" class="l-majorBlock__content">內容</div>
+    </div>
+</div>
+<br />
+
+<h3>小區塊：(匯率資訊/匯率試算).l-minorBlock</h3>
+<div style="background-color:#dddddd" class="l-minorBlock">
+    <div style="background-color:#a3cbf4" class="l-minorBlock__header">小標題</div>
+    <div style="background-color:#a3cbf4;height:150px" class="l-minorBlock__content">內文</div>
+    <div style="background-color:#a3cbf4" class="l-minorBlock__footer">底部</div>
+</div>
+
+<h3>金融市場資訊.l-marketBlock</h3>
+<!-- todo:RWD -->
+
+<div style="background-color:#dddddd" class="l-majorBlock">
+    <div class="l-majorBlock__wrap">
+        <div class="l-majorBlock__title">金融市場資訊</div>
+        <div class="l-marketBlock">
+            <div style="background-color:#a3cbf4;height:150px" class="l-marketBlock__info">匯率資訊區
+            </div>
+            <div style="background-color:#a3cbf4;height:150px" class="l-marketBlock__calc">匯率試算區
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

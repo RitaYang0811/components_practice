@@ -1,0 +1,208 @@
+{% extends './_layouts/_layout.tmpl' %}
+
+{% block content %}
+<h3>tab</h3>
+<p>c-tab</p>
+<div class="c-tab">
+    <div class="c-tab__nav">
+        <ul class="c-tabNav" role="tablist">
+            <li class="c-tabNav__item" role="presentation">
+                <!--button的id 與 panel的id要相符-->
+                <button id="tab-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="panel-01">頁籤01</button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="tab-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-02">頁籤02</button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="tab-03" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-03">頁籤03</button>
+            </li>
+        </ul>
+    </div>
+    <div class="c-tab__content">
+        <!--button的id 與 panel的id要相符-->
+        <div id="panel-01" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-01" aria-selected="true">
+            [ tab-01 ] content
+        </div>
+        <div id="panel-02" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-02">
+            [ tab-02 ] content
+        </div>
+        <div id="panel-03" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-03">
+            [ tab-03 ] content
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<p>c-tab c-tab--horizontal</p>
+<div class="c-tab c-tab--horizontal">
+    <div class="c-tab__nav">
+        <ul class="c-tabNav c-tabNav--vertical" role="tablist">
+            <!--button的id 與 panel的id要相符-->
+            <li class="c-tabNav__item" role="presentation">
+                <button id="tab-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="panel-h-01">頁籤01</button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="tab-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-h-02">頁籤02</button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="tab-03" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-h-03">頁籤03</button>
+            </li>
+        </ul>
+    </div>
+    <div class="c-tab__content">
+        <!--button的id 與 panel的id要相符-->
+        <div id="panel-h-01" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-01" aria-selected="true">
+            [ tab水平-01 ] content
+        </div>
+        <div id="panel-h-02" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-02">
+            [ tab水平-02 ] content
+        </div>
+        <div id="panel-h-03" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-03">
+            [ tab水平-03 ] content
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<p>c-tabNav</p>
+<ul class="c-tabNav" role="tablist">
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="demopanel-nav-01">
+            <i class="c-tabNav__icon c-tabNav__icon--lineChart"></i>
+            走勢圖
+        </button>
+    </li>
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+            <i class="c-tabNav__icon c-tabNav__icon--table"></i>
+            報價表
+        </button>
+    </li>
+</ul>
+<br>
+<hr>
+<br>
+<p>桌機固定寬，平版以下填滿 c-tabNav c-tabNav--pill </p>
+<ul class="c-tabNav c-tabNav--pill" role="tablist">
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="demopanel-nav-01">
+            強檔活動
+        </button>
+    </li>
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+            精選活動
+        </button>
+    </li>
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+            信用卡活動
+        </button>
+    </li>
+    <li class="c-tabNav__item" role="presentation">
+        <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+            台灣 Pay
+        </button>
+    </li>
+</ul>
+<br>
+<hr>
+<br>
+<p>桌機隱藏 平板以下出現 .c-tabNav .c-tabNav--select </p>
+<div class="c-tab">
+    <div class="c-tab__nav">
+        <ul class="c-tabNav c-tabNav--pill c-tabNav--select" role="tablist">
+            <li class="c-tabNav__item" role="presentation">
+                <button id="demotab-nav-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="selectpanel-01">
+                    即期/現金匯率
+                </button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="selectpanel-02">
+                    遠期匯率
+                </button>
+            </li>
+            <li class="c-tabNav__item" role="presentation">
+                <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="selectpanel-03">
+                    歷史匯率
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="c-tab__select">
+        <div class="o-tabSelect">
+            <button type="button" class="o-tabSelect__selected is-open">
+                <span class="o-tabSelect__text"> 即期/現金匯率</span>
+                <span class="o-tabSelect__collapse"></span>
+            </button>
+            <div class="o-tabSelect__optionPanel">
+                <ul class="o-tabSelect__options">
+                    <li>
+                        <button type="button" class="o-tabSelect__option is-active">
+                            即期/現金匯率
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="o-tabSelect__option">
+                            遠期匯率
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="o-tabSelect__option">
+                            歷史匯率
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-tab__content">
+            <!--button的id 與 panel的id要相符-->
+            <div id="selectpanel-01" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-01" aria-selected="true">
+                [ tab-01 ] content
+            </div>
+            <div id="selectpanel-02" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-02">
+                [ tab-02 ] content
+            </div>
+            <div id="selectpanel-03" class="c-tab__panel" role="tabpanel" aria-labelledby="tab-03">
+                [ tab-03 ] content
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <p>c-tabNav c-tabNav--vertical</p>
+    <ul class="c-tabNav c-tabNav--vertical" role="tablist">
+        <li class="c-tabNav__item" role="presentation">
+            <button type="button" id="demotab-nav-01" type="button" class="c-tabNav__link" role="tab" aria-selected="true" aria-controls="demopanel-nav-01">
+                理財，從存錢開始
+            </button>
+        </li>
+        <li class="c-tabNav__item" role="presentation">
+            <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+                手機就是您的銀行
+            </button>
+        </li>
+        <li class="c-tabNav__item" role="presentation">
+            <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+                陪您一起探索世界
+            </button>
+        </li>
+        <li class="c-tabNav__item" role="presentation">
+            <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+                陪您打造第一個家
+            </button>
+        </li>
+        <li class="c-tabNav__item" role="presentation">
+            <button id="demotab-nav-02" type="button" class="c-tabNav__link" role="tab" aria-selected="false" tabindex="-1" aria-controls="demopanel-nav-02">
+                陪您一起白頭到老
+            </button>
+        </li>
+
+    </ul>
+    <br>
+    <hr>
+    <br>
+    {% endblock %}

@@ -1,0 +1,108 @@
+{% extends './_layouts/_layout.tmpl' %}
+
+{% block content %}
+<!-- 實際使用請將style移除 -->
+<h2>均分</h2>
+<ul>
+    <li>.l-divide__item--half@md: 於平板呈現標準雙欄樣式</li>
+    <li>.l-divide__item--full@sm: 於手機呈現單欄樣式</li>
+    <li>
+        <strong>預設gap:20px需加上.u-flex-gap-lg</strong>
+    </li>
+    <li>其他不同gap，可加上不同.u-flex-gap-#{$gap}</li>
+    <li>
+        $gap 可參考"../_mixins/utilities"變數
+    </li>
+</ul>
+
+<h3>分隔-單欄</h3>
+<ul>
+    <li>l-divide__item</li>
+</ul>
+<div class="l-divide u-flex-gap-lg">
+    <div class="l-divide__item">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+</div>
+<h3>分隔-雙欄</h3>
+<ul>
+    <li>l-divide__item--half</li>
+</ul>
+<div class="l-divide u-flex-gap-sm">
+    <div class="l-divide__item--half">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--half">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--half">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--half">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+</div>
+<h3>分隔-三欄</h3>
+<ul>
+    <li>l-divide__item--4of12</li>
+</ul>
+<div class="l-divide u-flex-gap-lg">
+    <div class="l-divide__item--4of12">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--4of12">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--4of12">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--4of12">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+</div>
+<h3>分隔-四欄</h3>
+<ul>
+    <li>l-divide__item--3of12</li>
+</ul>
+<!-- .l-divide__item--half@md: 於平板呈現標準雙欄樣式 -->
+<!-- .l-divide__item--full@sm: 於手機呈現單欄樣式 -->
+<div class="l-divide u-flex-gap-lg">
+    <div class="l-divide__item--3of12 l-divide__item--half@md l-divide__item--full@sm">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--3of12 l-divide__item--half@md l-divide__item--full@sm">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--3of12 l-divide__item--half@md l-divide__item--full@sm">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+    <div class="l-divide__item--3of12 l-divide__item--half@md l-divide__item--full@sm">
+        <div style="background-color:#a3cbf4;height:150px"></div>
+    </div>
+</div>
+
+<h3>.l-flexBar</h3>
+<h3></h3>
+<div>
+    <div class="l-flexBar">
+        <div class="l-flexBar__full">l-flexBar__full</div>
+    </div>
+    <br />
+    <div class="l-flexBar">
+        <div class="l-flexBar__grow"> l-flexBar__grow</div>
+        <div class="l-flexBar__shrink">l-flexBar__shrink</div>
+    </div>
+    <br />
+    <div class="l-flexBar">
+        <div class="l-flexBar__left">l-flexBar__left</div>
+        <div class="l-flexBar__right">l-flexBar__right</div>
+    </div>
+    <br />
+    <div class="l-flexBar">
+        <div class="l-flexBar__center">l-flexBar__center</div>
+    </div>
+</div>
+{% endblock %}

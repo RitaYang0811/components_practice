@@ -1,192 +1,116 @@
-// @use '../_mixins/bemit' as bemit;
-// @use '../_mixins/utilities' as utilities;
+@use "_mixins/wrapper" as *;
+@use "_mixins/medias" as medias;
 
-// .l-divide {
-//   display: flex;
-//   flex-wrap: wrap;
+.l-majorBlock {
+    margin-top: 40px;
+    margin-bottom: 40px;
 
-//   @each $gap, $size in utilities.$gaps {
-//     &.u-flex-gap-#{$gap} {
-//       gap: $size;
+    &__wrap {
+        @include wrapper();
+    }
 
-//       .l-divide__item {
-//         box-sizing: border-box;
-//         flex: 0 0 auto;
-//         width: 100%;
 
-//         &--full {
-//           @include mixins.responsive() {
-//             width: 100%;
-//           }
-//         }
+    &__title {
+        margin-bottom: 32px;
+        text-align: center;
+    }
 
-//         &--6of12,
-//         &--half {
-//           @include mixins.responsive() {
-//             flex-basis: calc((100% - (#{$size} * 1)) / 2);
-//             width: calc((100% - (#{$size} * 1)) / 2);
-//           }
-//         }
+    &__news,
+    &__video {
+        flex: 1;
 
-//         &--4of12 {
-//           @include mixins.responsive() {
-//             flex-basis: calc((100% - (#{$size} * 2)) / 3);
-//             width: calc((100% - (#{$size} * 2)) / 3);
-//           }
-//         }
+        @include medias.breakpoint-down('md') {
+            width: auto;
+            max-width: 100%;
+        }
+    }
 
-//         &--3of12 {
-//           @include mixins.responsive() {
-//             flex-basis: calc((100% - (#{$size} * 3)) / 4);
-//             width: calc((100% - (#{$size} * 3)) / 4);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+    &__news {
+        @include medias.breakpoint-up('lg') {
+            width: 780px;
+            flex: 1 0 780px;
+        }
+    }
 
-// .l-flexBar {
-//   > div {
-//     background: #ffe0e0; //實際使用請移除
-//   }
+    &__video {
+        @include medias.breakpoint-up('lg') {
+            width: 380px;
+            flex: 1 0 380px;
+        }
+    }
 
-//   display: flex;
-//   flex-wrap: wrap;
+    // &--kv {}
 
-//   &__full {
-//     flex: 1 0 100%;
-//   }
+    &__chill {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
 
-//   &__grow {
-//     flex: 1 1 auto;
-//   }
+        @include medias.breakpoint-down('md') {
+            flex-direction: column;
+        }
 
-//   &__shrink {
-//     flex: 0 1 auto;
-//   }
+        @include medias.breakpoint-down('sm') {
+            gap: 80px;
+        }
+    }
 
-//   &__right {
-//     margin-left: auto;
-//   }
+    &--sm {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
-//   &__center {
-//     margin: 0 auto;
-//   }
-// }
-// /* block */
-// /* @use "_mixins/wrapper" as *;
-// @use "_mixins/medias" as medias; */
+    &--lg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
-// .l-majorBlock {
-//   margin-top: 40px;
-//   margin-bottom: 40px;
+    &--insidePage {
+        margin-top: 0px;
+    }
+}
 
-//   &__wrap {
-//     @include wrapper();
-//   }
+.l-minorBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-//   &__title {
-//     margin-bottom: 32px;
-//     text-align: center;
-//   }
+.l-marketBlock {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 
-//   &__news,
-//   &__video {
-//     flex: 1;
+    &__info,
+    &__calc {
+        flex: 1;
 
-//     @include medias.breakpoint-down('md') {
-//       width: auto;
-//       max-width: 100%;
-//     }
-//   }
+        @include medias.breakpoint-down('md') {
+            width: auto;
+            max-width: 100%;
+        }
+    }
 
-//   &__news {
-//     @include medias.breakpoint-up('lg') {
-//       width: 780px;
-//       flex: 1 0 780px;
-//     }
-//   }
+    &__info {
+        @include medias.breakpoint-up('lg') {
+            width: 730px;
+            flex: 1 0 730px;
+        }
+    }
 
-//   &__video {
-//     @include medias.breakpoint-up('lg') {
-//       width: 380px;
-//       flex: 1 0 380px;
-//     }
-//   }
+    &__calc {
+        @include medias.breakpoint-up('lg') {
+            width: 450px;
+            flex: 1 0 450px;
+        }
+    }
 
-//   // &--kv {}
+    @include medias.breakpoint-down('md') {
+        width: 100%;
+    }
 
-//   &__chill {
-//     display: flex;
-//     justify-content: space-between;
-//     gap: 40px;
-
-//     @include medias.breakpoint-down('md') {
-//       flex-direction: column;
-//     }
-
-//     @include medias.breakpoint-down('sm') {
-//       gap: 80px;
-//     }
-//   }
-
-//   &--sm {
-//     padding-top: 20px;
-//     padding-bottom: 20px;
-//   }
-
-//   &--lg {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-//   }
-
-//   &--insidePage {
-//     margin-top: 0px;
-//   }
-// }
-
-// .l-minorBlock {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 20px;
-// }
-
-// .l-marketBlock {
-//   display: flex;
-//   gap: 20px;
-//   justify-content: space-between;
-
-//   &__info,
-//   &__calc {
-//     flex: 1;
-
-//     @include medias.breakpoint-down('md') {
-//       width: auto;
-//       max-width: 100%;
-//     }
-//   }
-
-//   &__info {
-//     @include medias.breakpoint-up('lg') {
-//       width: 730px;
-//       flex: 1 0 730px;
-//     }
-//   }
-
-//   &__calc {
-//     @include medias.breakpoint-up('lg') {
-//       width: 450px;
-//       flex: 1 0 450px;
-//     }
-//   }
-
-//   @include medias.breakpoint-down('md') {
-//     width: 100%;
-//   }
-
-//   @include medias.breakpoint-down('sm') {
-//     flex-direction: column;
-//     gap: 32px;
-//   }
-// }
+    @include medias.breakpoint-down('sm') {
+        flex-direction: column;
+        gap: 32px;
+    }
+}

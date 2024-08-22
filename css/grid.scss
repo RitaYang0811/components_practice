@@ -1,0 +1,79 @@
+@use "../_mixins/utilities" as mixins;
+@use "../_components/utilities" as utilities;
+
+.l-divide {
+    display: flex;
+    flex-wrap: wrap;
+
+    @each $gap, $size in utilities.$gaps {
+        &.u-flex-gap-#{$gap} {
+            gap: $size;
+
+            .l-divide__item {
+                box-sizing: border-box;
+                flex: 0 0 auto;
+                width: 100%;
+
+
+                &--full {
+                    @include mixins.responsive() {
+                        width: 100%;
+                    }
+                }
+
+                &--6of12,
+                &--half {
+                    @include mixins.responsive() {
+                        flex-basis: calc((100% - (#{$size} * 1)) / 2);
+                        width: calc((100% - (#{$size} * 1)) / 2);
+                    }
+
+                }
+
+                &--4of12 {
+                    @include mixins.responsive() {
+                        flex-basis: calc((100% - (#{$size} * 2)) / 3);
+                        width: calc((100% - (#{$size} * 2)) / 3);
+                    }
+                }
+
+                &--3of12 {
+                    @include mixins.responsive() {
+                        flex-basis: calc((100% - (#{$size} * 3)) / 4);
+                        width: calc((100% - (#{$size} * 3)) / 4);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.l-flexBar {
+    >div {
+        background: #ffe0e0; //實際使用請移除
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__full {
+        flex: 1 0 100%;
+    }
+
+    &__grow {
+        flex: 1 1 auto;
+    }
+
+    &__shrink {
+        flex: 0 1 auto;
+    }
+
+    &__right {
+        margin-left: auto;
+    }
+
+    &__center {
+        margin: 0 auto;
+    }
+}
